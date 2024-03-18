@@ -1,5 +1,5 @@
 // ---------------------------------------------------------
-//  VPL 05 - Fakultät Angabe:
+// VPL 05 - Fakultät Angabe:
 // Schreiben Sie ein Programm, das eine ganze Zahl einliest und
 // deren Fakultät n! berechnet.
 //

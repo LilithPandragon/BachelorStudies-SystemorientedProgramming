@@ -1,4 +1,5 @@
 //----------------------------------------------------------------
+// VPL 02 - Länge eines Strings Angabe:
 // Schreiben sie eine Funktion my_strlen(char string[]), welche die Länge eines Strings ohne den sizeof() Operator zu verwenden, berechnet.
 // Verwenden sie dazu eine Schleife und testen sie die Funktion mit folgender Zeichenkette:
 //    char text[100]="FH JOANNEUM";

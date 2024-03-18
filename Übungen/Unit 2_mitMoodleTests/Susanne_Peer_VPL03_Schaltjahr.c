@@ -13,8 +13,6 @@
 //
 // Susanne Peer SWD21
 
-
-
 #include <stdio.h>
 
 int main() {
@@ -26,7 +24,7 @@ int main() {
 
 
     if (checkyear % 400 == 0) { //Prüfung Jahr durch 400 teilbar
-        printf("HURRA %d ist ja doch ein Schaltjahr!\n", checkyear);
+        printf("%d ist ein Schaltjahr!\n", checkyear);
     } else if (checkyear % 100 == 0) { // Prüfung Jahr durch 100 teilbar
         printf("%d ist ein Schaltjahr.\n", checkyear);
     } else if (checkyear % 4 == 0) { //Prüfung Jahr durch 4 teilbar

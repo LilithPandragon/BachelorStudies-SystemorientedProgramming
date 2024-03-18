@@ -1,4 +1,5 @@
 //----------------------------------------------------------------
+// VPL 04 - QuickSort Angabe:
 // Die Funktion qsort() ist in der Standardlibrary vorhanden,
 // um Arrays oder Speicherbereiche zu sortieren.
 // Schlagen Sie die Definition von qsort() in der entsprechenden

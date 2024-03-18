@@ -1,4 +1,5 @@
 // --------------------------------------------------------------------------------
+// VPL 01 - Array Elemente Angabe:
 // Berechnen Sie die Anzahl der Elemente in einem Array
 // und geben Sie jedes Element innerhalb einer Schleife einzeln aus.
 // Berechnen Sie weiters auch den Minimal- und Maximalwert des Arrays.

@@ -1,5 +1,5 @@
 //---------------------------------------------------------------------------
-//  VPL 01 - Kleinbuchstaben Angabe:
+// VPL 01 - Kleinbuchstaben Angabe:
 // Definieren Sie eine char Variable und initialisieren Sie diese
 // mit dem Kleinbuchstaben 'q'.
 //

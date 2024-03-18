@@ -1,15 +1,5 @@
 //----------------------------------------------------------------
-// Schreiben Sie eine Funktion swap, die zwei int Werte vertauscht.
-// Die Signatur sollte so aussehen: void swap(int *a, int *b);
-//
-// Testen Sie die Funktion für mindestens 3 Wertepaare und
-// geben Sie die Werte vor und nach der Vertauschung aus.
-//----------------------------------------------------------------
-// Systemnahe Programmierung 6. Semester
-//
-// Susanne Peer SWD21
-
-//----------------------------------------------------------------
+// VPL 03 - Swap Angabe:
 // Schreiben Sie eine Funktion swap, die zwei int Werte vertauscht.
 // Die Signatur sollte so aussehen: void swap(int *a, int *b);
 //
