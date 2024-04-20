@@ -27,7 +27,7 @@
 // mich orientiert, welches Sie in der VO durchgegangen sind
 //
 // ----------------------------------------------------------------
-// Systemnahe Programmierung 6. Semester
+// Systemnahe Programmierung SS24
 //
 // Susanne Peer SWD21
 

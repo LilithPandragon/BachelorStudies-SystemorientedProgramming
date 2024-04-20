@@ -20,7 +20,8 @@
 // Erzeugen Sie zum Testen mind. 7 Personeneinträge, die sie in die Liste einfügen.
 // Geben Sie alle Elemente der Liste aus.
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// Systemnahe Programmierung
+// Systemnahe Programmierung SS24
+//
 // Susanne Peer SWD21
 
 #include <stdio.h>
@@ -29,7 +30,7 @@
 #include <ctype.h>
 
 /*
- * Personenliste Aufgabe 1
+  Personenliste Aufgabe 1
  */
 struct person {
   int id;
@@ -44,7 +45,7 @@ typedef struct person person;
 person *start = NULL;
 
 /*
- * Alle Personeneinträge in der Liste ausgeben.
+  Alle Personeneinträge in der Liste ausgeben.
 */
 void personenAusgeben(person *start) {
     person *current = start;
@@ -56,8 +57,8 @@ void personenAusgeben(person *start) {
 }
 
 /*
- * Heap-Speicher für eine Personen-Struktur allozieren und Daten
- * in den Speicherbereich schreiben.
+ Heap-Speicher für eine Personen-Struktur allozieren und Daten
+ in den Speicherbereich schreiben.
  */
 person *personAnlegen(char *vorname, char *nachname, char *telefon, char *mail) {
     person *newPersoni = (person*)malloc(sizeof(person));
@@ -76,7 +77,7 @@ person *personAnlegen(char *vorname, char *nachname, char *telefon, char *mail) 
 }
 
 /*
- * Einen neuen Personenrecord am Ende der Liste anfügen.
+ Einen neuen Personenrecord am Ende der Liste anfügen.
  */
 void personEinfuegen(person *p) {
     if (start == NULL) {
@@ -91,8 +92,9 @@ void personEinfuegen(person *p) {
 }
 
 int main() {
-   //  person *start = NULL;
- // printf("startiiiii");
+//person *start = NULL;
+// Test ob hier was ausgegeben wird
+// printf("startiiiii");
 
   personEinfuegen(personAnlegen("David", "Pfeifer", "06886167181", "DavidPfeifer@gmx.com"));
   personEinfuegen(personAnlegen("Doreen", "Baier", "06608191358", "DoreenBaier@cuvox.de"));

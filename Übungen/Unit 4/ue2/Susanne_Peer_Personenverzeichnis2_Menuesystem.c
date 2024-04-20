@@ -31,7 +31,8 @@
 // }
 // }
 //----------------------------------------------------------------------
-// Systemnahe Programmierung
+// Systemnahe Programmierung SS24
+//
 // Susanne Peer SWD21
 
 

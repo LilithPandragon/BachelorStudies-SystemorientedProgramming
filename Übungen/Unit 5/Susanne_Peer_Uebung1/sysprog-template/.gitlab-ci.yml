@@ -1,0 +1,44 @@
+# sample pipeline  for compiling c programs
+image: ubuntu:latest
+ 
+stages:
+ - build
+ - test
+ - deploy
+ 
+before_script:
+ - echo "Before script install this on ubuntu image "
+ - apt-get -y update && apt-get -y install build-essential && apt-get -y install splint && apt-get -y install valgrind && apt-get -y install curl && apt-get -y install libconfig-dev
+
+build_job:
+  stage: build
+  tags:
+    - edu
+  only:
+    - main
+  script:  
+     - make
+     - pwd  
+    
+  artifacts:
+    expire_in: 365 days
+    paths:
+       - bin
+
+#test_job:
+#  stage: test
+#  tags:
+#    - edu
+#  only:
+#    - main
+#  script:
+#    - pwd  
+#    - make run
+#
+#dependencies:
+#  - build_job
+
+#deploy_job:
+#  stage: deploy
+#  tags:
+#    - edu
