@@ -1,4 +1,5 @@
 //----------------------------------------------------------
+//      Uebung 1: Signale 
 // 1) Implementieren sie eine Funktion in der Art
 //    int setSignalHandler (int signal, void (*signalhandler)(int)) { … }
 // welche den Funktionsparameter signalhandler als Signalhandler 
