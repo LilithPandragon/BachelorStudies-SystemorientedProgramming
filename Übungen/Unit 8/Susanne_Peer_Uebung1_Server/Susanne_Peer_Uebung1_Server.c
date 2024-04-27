@@ -1,5 +1,12 @@
 //------------------------------------------------------------
 // Uebung 1: Server
+// ###################################################################
+//                      ~ACHTUNG!!!!!~
+// Das Programm muss unter Windows kompiliert werden und auf einem Windows-System laufen.
+// compile with:   gcc -o server Susanne_Peer_Uebung1_Server.c -lws2_32 
+// run with:       ./server
+// ###################################################################
+//                          ~Angabe~ 
 // Schreiben sie ein Programm server.c, das einen Socket-Server, der 
 // auf Port 17000 Verbindungen akzeptiert, implementiert.
 //
@@ -17,11 +24,6 @@
 //
 // Zum Testen können sie folgenden Befehl verwenden:
 //    curl --get http://localhost:17000 
-//
-// ACHTUNG!!!!!
-// Das Programm muss unter Windows kompiliert werden und auf einem Windows-System laufen.
-// compile with:   gcc -o server Susanne_Peer_Uebung1_Server.c -lws2_32 
-// run with:       ./server
 //
 //------------------------------------------------------------
 // Systemnahme Programmierung SWD21
