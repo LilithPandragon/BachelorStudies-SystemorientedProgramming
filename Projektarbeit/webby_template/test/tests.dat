@@ -1,0 +1,25 @@
+# Format:
+# <Method>$URL$<Expected result>
+# Method: G|P .... Request Method GET or POST
+# URL: URL with parameters
+# Expected result: String which must be included in the response body
+#
+G$http://localhost:17000/$<!DOCTYPE html>
+G$http://localhost:17000/?id=3$lautet 42
+G$http://localhost:17000/404.html$ERROR 404
+G$http://localhost:17000/unterordner/test$<!DOCTYPE html>
+G$http://localhost:17000/unterordner$<!DOCTYPE html>
+G$http://localhost:17000/verwandlung.txt$Als Gregor Samsa eines Morgens aus unruhigen Träumen erwachte
+G$http://localhost:17000/test/hallo.sh?ud=3&name=dali&loc=hier&meaning=42$ERROR 404
+G$http://localhost:17000/test.pdf$PDF-1.6
+G$http://localhost:17000/error.html$ERROR_HTML_TEST
+G$http://localhost:17000/error.js$Keine Panik!
+G$http://localhost:17000/mein_glückskäfer!$ERROR 404
+G$http://localhost:17000/test/mein+glückskäfer.txt$Glückskäfer!
+G$http://localhost:17000/services
+G$http://localhost:17000/services/noservice?id=3$ERROR 404
+G$http://localhost:17000/services/testservice?id=3$called with parameters: 3
+P$http://localhost:17000/services/simpleservice$POST test script$param1 param2 param3
+P$http://localhost:17000/services/simpleservice$POST test script$param1 
+P$http://localhost:17000/services/simpleservice$POST test script$
+P$http://localhost:17000/services/simpleservic$ERROR 404$hallo test

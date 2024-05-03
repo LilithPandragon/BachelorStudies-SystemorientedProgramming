@@ -1,0 +1,4 @@
+#!/bin/bash 
+echo "POST test script"
+echo "Parameters ${1} ${2} ${3}"
+echo ""

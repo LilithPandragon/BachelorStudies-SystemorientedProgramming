@@ -1,0 +1,72 @@
+#!/bin/bash 
+text2html() {
+  while IFS= read -r line; do
+    sed 's/ü/\&uuml;/; s/Ü/\&Uuml;/; s/ä/\&auml;/; s/Ä/\&Auml;/; s/ö/\&ouml;/; s/Ö/\&Ouml;/g' <<<"$line"
+  done
+}
+
+echo "<!DOCTYPE html>"
+echo "<html lang=\"de\"><head>"
+echo "<meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\">"
+echo "<style>"
+echo "body {
+    font-family: sans-serif;
+}
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.styled-table thead tr {
+    background-color: #d4002d;
+    color: #ffffff;
+    text-align: left;
+}
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tr:first-child td {
+    font-weight: bold;
+    color: #d4002d;
+}
+
+.styled-table thead {
+    font-weight: bold;
+    color: #d4002d;
+}"
+
+echo "</style>"
+echo "</head>"
+echo "<body>"
+hn=$(hostname)
+#  this script returns with a pathspec of /services/testservice, so all conseqent
+#  relative paths will be treated by the client as one level beneath the html directory.
+#  To access files in the html directory we have to use ../ to adjust the path. 
+echo "<img src=\"../logo.png\">"
+echo "<p>Script $0 called with parameters: $@</p>"
+echo "<h1>Diskspace available on host ${hn}</h1>"
+
+out="$(df -k)"
+echo "<table class=\"styled-table\">"
+echo "${out}" | text2html | while read c1 c2 c3 c4 c5 c6; do
+  echo "<tr class=\"active-row\">
+   <td>${c1}</td><td>${c2}</td><td>${c3}</td><td>${c4}</td><td>${c5}</td><td>${c6}</td>
+   </tr>"
+done 
+
+echo "</table>"
+echo "</body>"
+echo "</html>"
+
